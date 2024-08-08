@@ -14,10 +14,11 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Laravel\Nova\Fields\SupportsDependentFields;
 
 class Media extends Field
 {
-    use HandlesCustomPropertiesTrait, HandlesConversionsTrait, HandlesExistingMediaTrait;
+    use HandlesCustomPropertiesTrait, HandlesConversionsTrait, HandlesExistingMediaTrait, SupportsDependentFields;
 
     public $component = 'advanced-media-library-field';
 
